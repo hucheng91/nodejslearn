@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>nodejs学习lession1</title>
+    <link  rel="stylesheet" type="text/css" href="assert/plugins/bootstrap/css/bootstrap.css"/>
+    <style>
+      .index_mytest_div{
+        padding: 50px;
+        border:1px solid #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="row index_mytest_div">
+      <form method="post" action="/loginverificat">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="form-group"><h1>nodejs练习lession2</h1></div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">邮箱</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">密码</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="pwd" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">图片</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn blue" id="form_submit">提交</button>
+
+  </div>
+      </form>
+ </div>
+  <script src="assert/plugins/jquery/js/jquery-1.10.2.min.js" type="application/javascript"></script>
+  <script src="assert/plugins/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+<script>
+  jQuery(document).ready(function() {
+    $("#form_submit").bind("click",function(){
+
+      var email = $("#exampleInputEmail1").val();
+      var pwd = $("#exampleInputPassword1").val();
+        console.log(email);
+        $.ajax({
+            url:'/loginverificat',
+            type:'post',
+            contentType:"application/json",
+            data: JSON.stringify({email:email,pwd:pwd}),
+            success: function(data){
+              console.log(data);
+            },
+            error: function(data,status){
+                console.log("error");
+            }
+        });
+
+    });
+
+  });
+</script>
+  </body>
+</html>
