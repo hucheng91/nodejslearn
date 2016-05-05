@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link  rel="stylesheet" type="text/css" href="assert/plugins/bootstrap/css/bootstrap.css"/>
+    <!--<link ref="stylesheet" type="text/css" href="assert/plugins/bootstrap/css/bootstrap.css">-->
+    <style>
+        .index_mytest_div{
+            padding: 50px;
+        }
+    </style>
+</head>
+<div class="col-md-9 col-md-offset-3">
+    <h1>文章列表</h1>
+    {{#each entries}}
+    <p>
+        <a href="/article/{{id}}">{{title}}</a><br/>
+        Published: {{published}}
+    </p>
+    {{/each}}
+</div>
+<div class="col-md-9 col-md-offset-3">
+    <p>
+        <a href="/">首页</a>
+    </p>
+</div>
+
+<script src="assert/plugins/jquery/js/jquery-1.10.2.min.js" type="application/javascript"></script>
+<script src="assert/plugins/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+<script>
+    jQuery(document).ready(function() {
+        // initiate layout and plugins
+
+    });
+</script>
+</body>
+</html>

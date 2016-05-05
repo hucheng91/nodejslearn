@@ -1,0 +1,10 @@
+{
+  "name": "lession3",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "multer": "^0.1.8"
+  }
+}
