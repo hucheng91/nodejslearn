@@ -28,10 +28,7 @@ npm ERR! Exit status 1
   }
 ```
 出现以上问题后 我怀疑是window 的原因，切换到centos ,还是报同样问题；然后就郁闷了，于是找到lovli.js的作者，给他发了个邮件，这个老外挺好的给我回了邮件，邮件如下：
-```javascript
-
-
-```
+[](https://github.com/hucheng91/nodejslearn/blob/master/test/img/a.jpg)
 上面这句话给了我想法，如是，怒删LATER_COV，把package改成
 ```javascript
  "scripts": {
@@ -90,6 +87,6 @@ export default subscribe()(AddTodoButton);
 <span className={styles.caption}>mType:{ todo.messageType||'-'}</span>
 ```
 页面展示
-
+[](https://github.com/hucheng91/nodejslearn/blob/master/test/img/c.jpg)
 
 #基本就完成了测试，然后改成redux-form时，我遇到了很多问题，目前就还没有实现，对很多方法不熟，我把我整个处理这个面试测试写下来是想通过整个过程展示我平常处理事情的方法，我没有redux-form实现，是因为我接触node才半个月，对这些不是很熟，我以前都是在研究原生javascript,因为我觉得只有才原理上明白整个语言，把骨架搭起来，研究各种js框架才快的起来，毕竟js框 架更新太快，但原理是不会变的，如果有一段缓冲的学习时间，我能很快掌握这方面知识的；知道华院数据是做大数据分析的，非常感兴趣，希望能给个机会
